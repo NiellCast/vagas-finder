@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+    
+    <title>Vagas Finder: Encontre seu emprego em minutos!</title>
+</head>
+<body id="main-container" onload="mudarAds()">
+    <header>
+        <img src="assets/images/logo.png" alt="logo">
+        <h1>Encontre seu Emprego</h1>
+
+        <nav>
+            <ul id="publicar-vaga">
+                <li><a href="publicar-vaga.html" rel="next" target="_blank" id="link-publicar-vagas">Publicar uma vaga</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="content-container">
+        <div id="filtragem">
+            <form action="#">
+                <fieldset class="filtro">
+                    <label for="cargo">Cargo:</label>
+                    <input type="search" name="cargo" id="cargo">
+                </fieldset>
+
+                <fieldset class="filtro">
+                    <label for="local-label">Localidade:</label>
+                    <input type="text" name="localidade" id="local-label">
+                </fieldset>
+                
+                <fieldset class="filtro">
+                    <label for="escolaridade-label">Escolaridade:</label>
+                    <select name="escolaridade" id="escolaridade-select">
+                        <option value="todas">Qualquer</option>
+                        <option value="fundamental">Ensino Fundamental</option>
+                        <option value="medio">Ensino Médio</option>
+                        <option value="superior">Ensino Superior</option>
+                    </select>
+                </fieldset>
+
+                <fieldset class="filtro">
+                    <label for="tipos-de-contratacoes">Contratação</label>
+                    <select name="tipos" id="tipos-de-contratacoes">
+                        <option value="clt">CLT</option>
+                        <option value="pj">PJ</option>
+                        <option value="jovem-aprendiz">Jovem Aprendiz</option>
+                        <option value="estagio">Estágio</option>
+                        <option value="temporario">Temporário</option>
+                        <option value="meio-periodo">Meio Período</option>
+                    </select>
+                </fieldset>
+
+                <fieldset class="filtro">
+                    <label for="experiencia-necessaria">Experiência:</label>
+                    <select name="experiencia" id="experiencia-necessaria">
+                        <option value="todas">Sem Experiência</option>
+                        <option value="um-ano">1 ano</option>
+                        <option value="um-ano">2 anos</option>
+                        <option value="um-ano">3 anos</option>
+                        <option value="um-ano">Mais de 3 anos</option>
+                    </select>
+                </fieldset>
+
+                <fieldset class="filtro salario">
+                    <label for="salario-choice">Vagas com salário acima de:</label>
+
+                    <input type="range" name="salario" id="salario-choice" min="1308" max="20000" value="1308" step="1" onmousemove="mudarValorDoInput()" onpointermove="mudarValorDoInput()">
+
+                    <input type="text" id="salario-value" oninput="mudarValorDoRange()" value="1308">
+                </fieldset>
+            </form>
+
+            <div class="filtro">
+                <button id="pesquisar">Pesquisar</button>
+            </div>
+
+        </div>
+
+        <section>
+            <div id="vagas">
+                <div class="publicacao">
+                    <a href="#">Assistente Comercial – Clínica Odontológica – até R$ 1.800,00 – Jacarepaguá (Freguesia) – 2 vagas</a>
+                </div>
+                
+                <div class="publicacao">
+                    <a href="#">Chapeiro(a) – Restaurante – R$ 1.300,00 – Jacarepaguá – 5 vagas</a>
+                </div>
+                <div class="publicacao">
+                    <a href="#">Auxiliar de Loja – Loja de Utilidades para o Lar – R$ 1.294,00 – Vicente de Carvalho</a>
+                </div>
+
+                <div class="publicacao">
+                    <a href="#">Pizzaiolo – Restaurante – até R$ 1.600,00 – Bangu</a>
+                </div>
+
+                <div class="publicacao">
+                    <a href="#">Cozinheiro – Restaurante – até R$ 2.000,00 – Bangu – 2 vagas</a>
+                </div>
+                <div class="publicacao">
+                    <a href="#">Assistente Comercial – Clínica Odontológica – até R$ 1.800,00 – Jacarepaguá (Freguesia) – 2 vagas</a>
+                </div>
+                
+                <div class="publicacao">
+                    <a href="#">Chapeiro(a) – Restaurante – R$ 1.300,00 – Jacarepaguá – 5 vagas</a>
+                </div>
+                <div class="publicacao">
+                    <a href="#">Auxiliar de Loja – Loja de Utilidades para o Lar – R$ 1.294,00 – Vicente de Carvalho</a>
+                </div>
+
+                <div class="publicacao">
+                    <a href="#">Pizzaiolo – Restaurante – até R$ 1.600,00 – Bangu</a>
+                </div>
+
+                <div class="publicacao">
+                    <a href="#">Cozinheiro – Restaurante – até R$ 2.000,00 – Bangu – 2 vagas</a>
+                </div>
+            </div>
+
+            <nav id="pages-content">
+                <ul id="pages">
+                    <li>Próxima Página</li>
+                </ul>
+            </nav>
+        </section>
+
+        <aside>
+            <img src="assets/images/ads/kfc.webp" alt="ads" id="ads">
+        </aside>
+    </div>
+
+    <script src="assets/script.js"></script>
+</body>
+</html>
